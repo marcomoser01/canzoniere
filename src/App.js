@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import IndiceCanzoni from './components/IndiceCanzoni/IndiceCanzoni';
+import ShowSpartito from './components/ShowSpartito/ShowSpartito';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <div className="main-content">
+          <Routes>
+            <Route path="/indice-canzoni" element={<IndiceCanzoni />} />
+            <Route path="/spartito/:url" element={<ShowSpartito />} />
+            <Route path="/" element={<h1 className="home-title">Benvenuto nel Canzoniere</h1>} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
