@@ -4,6 +4,8 @@
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 20px;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar-container {
@@ -47,4 +49,131 @@
 
 .active {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger Icon - visibile solo su mobile */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Animazione hamburger quando menu è aperto */
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Overlay per chiudere il menu quando cliccato all'esterno */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  backdrop-filter: blur(2px);
+}
+
+/* Header del menu mobile */
+.mobile-menu-header {
+  display: none;
+}
+
+/* Stili responsive per dispositivi mobili */
+@media screen and (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Inizialmente fuori dallo schermo */
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #1e3a8a;
+    padding: 0 0 30px 0;
+    transition: left 0.3s ease;
+    z-index: 950;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-menu.menu-open {
+    left: 0; /* Menu visibile */
+  }
+
+  /* Header del menu mobile */
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+  }
+
+  .mobile-menu-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .close-menu-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+
+  .close-menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-item {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 } 
