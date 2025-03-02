@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/canzoniere-laste/static/css/main.362810ad.css",
-    "main.js": "/canzoniere-laste/static/js/main.7e8beadc.js",
-    "index.html": "/canzoniere-laste/index.html",
-    "main.362810ad.css.map": "/canzoniere-laste/static/css/main.362810ad.css.map",
-    "main.7e8beadc.js.map": "/canzoniere-laste/static/js/main.7e8beadc.js.map"
+    "main.css": "/canzoniere/static/css/main.362810ad.css",
+    "main.js": "/canzoniere/static/js/main.7e8beadc.js",
+    "index.html": "/canzoniere/index.html",
+    "main.362810ad.css.map": "/canzoniere/static/css/main.362810ad.css.map",
+    "main.7e8beadc.js.map": "/canzoniere/static/js/main.7e8beadc.js.map"
   },
   "entrypoints": [
     "static/css/main.362810ad.css",
