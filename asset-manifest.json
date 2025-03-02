@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/canzoniere/static/css/main.362810ad.css",
-    "main.js": "/canzoniere/static/js/main.7e8beadc.js",
+    "main.css": "/canzoniere/static/css/main.d39ca7e7.css",
+    "main.js": "/canzoniere/static/js/main.fa519ea5.js",
     "index.html": "/canzoniere/index.html",
-    "main.362810ad.css.map": "/canzoniere/static/css/main.362810ad.css.map",
-    "main.7e8beadc.js.map": "/canzoniere/static/js/main.7e8beadc.js.map"
+    "main.d39ca7e7.css.map": "/canzoniere/static/css/main.d39ca7e7.css.map",
+    "main.fa519ea5.js.map": "/canzoniere/static/js/main.fa519ea5.js.map"
   },
   "entrypoints": [
-    "static/css/main.362810ad.css",
-    "static/js/main.7e8beadc.js"
+    "static/css/main.d39ca7e7.css",
+    "static/js/main.fa519ea5.js"
   ]
 }
